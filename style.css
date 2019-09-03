@@ -1,0 +1,86 @@
+/**
+Theme Name: TEC
+Author: Paul Hart, Iriss
+Author URI: http://wpastra.com/about/
+Description: Child of Astra theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tec
+Template: astra
+*/
+
+
+/* Documents */
+aside.tec-docs{
+	
+}
+aside.tec-docs h3{
+	background-color: #eee;
+	padding:15px;
+	margin-bottom:1em;
+}
+aside.tec-docs i{padding-right:1em;}
+/* Events */
+.event-details-single-inner{
+	font-size: 0.8rem;
+	border:1px solid #61CFC2;
+	padding: 10px;
+	padding-top:20px;
+}
+.event-details-single-inner li{
+	line-height:1.3em;
+}
+.event-details-single-inner .day, .event-details-single-inner .month, .event-details-single-inner .when{
+	font-size: 1.3em;
+}
+.event-details-single-inner .month{
+	margin-left:10px;
+}
+.event-details-single-inner .when{
+	line-height: normal;
+}
+.event-details-single-inner .booknow{
+	width:100%;
+	display:block;
+	text-align:center;
+}
+.event-details-single-inner .bookclosed{
+	width:100%;
+	display:block;
+	text-align:center;
+	background-color:grey;
+	color:white;
+}
+.event-details-single-outer h2{
+	color:#fff;
+	background-color: #61CFC2;
+	text-align:center;
+	padding:15px;
+	font-size:1.2em;
+}
+.event-details-single-outer ul{
+	list-style:none;
+	margin:0;
+}
+.event-details-single-outer ul li{
+	padding-bottom:1.2em;
+	display: flex;
+	align-items: flex-start;
+}
+.event-details-single-outer ul li span{
+	padding-left:10px;
+}
+
+
+
+/* Icons */
+.tec-icons{color:#3D827A;font-size:1.5em;}
+.tec-icons-dense{margin-bottom:auto;}
+/* Edit Button */
+.tec-edit-button{
+	background: #2f847a;
+	padding: 0 10px;
+	border-left:1px solid white;
+	border-right:1px solid white;
+}
