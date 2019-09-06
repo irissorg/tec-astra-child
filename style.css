@@ -3,13 +3,13 @@ Theme Name: TEC
 Author: Paul Hart, Iriss
 Author URI: http://wpastra.com/about/
 Description: Child of Astra theme
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tec
 Template: astra
 */
-
+/* .ast-no-sidebar.ast-separate-container .entry-content .alignfull{margin-right:inherit;margin-left:inherit;} */
 
 /* Documents */
 aside.tec-docs{
@@ -84,3 +84,33 @@ aside.tec-docs i{padding-right:1em;}
 	border-left:1px solid white;
 	border-right:1px solid white;
 }
+
+
+/* Accessibility Fixes */
+.pt-cv-view *:focus, *:focus {
+/* 	outline-color: #006FF5 !important; */
+/* 	outline-color: Highlight;
+	outline-style:solid !important;
+	outline-width:3px !important;
+	transition: unset !important; */
+/* 	outline: -webkit-focus-ring-color auto 5px */
+ }
+
+.js-focus-visible .focus-visible{
+	outline-color: Highlight;
+	outline-style:solid !important;
+	outline-width:3px !important;
+	transition: unset !important;
+}
+
+
+
+.content-area p a{border-bottom: #0274be 0.125rem solid;}
+
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+
+

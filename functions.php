@@ -105,7 +105,8 @@ add_action( 'wp', 'tec_remove_sidebar' );
 
 
 
-
+// add_filter( 'pt_cv_field_thumbnail_nolink', '__return_true' );
+// Content Views Pro - Show thumbnail without hyperlink
 
 
 
