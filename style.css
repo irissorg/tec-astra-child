@@ -88,7 +88,7 @@ aside.tec-docs i{padding-right:1em;}
 
 
 /* Accessibility Fixes */
-.scriptlesssocialsharing__buttons a.twitter{background-color: #1074C1;}
+.scriptlesssocialsharing__buttons a.twitter{background-color: #1074C1 !important;}
 
 
 
