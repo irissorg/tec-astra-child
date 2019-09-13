@@ -103,14 +103,11 @@ aside.tec-docs i{padding-right:1em;}
 	transition: unset !important;
 }
 
-
-
 .content-area p a, .content-area li a{border-bottom: #0274be 0.125rem solid;}
-
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
 
-
+.ast-search-menu-icon .search-field { color: red;}
 
