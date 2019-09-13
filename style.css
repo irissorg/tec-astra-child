@@ -88,6 +88,10 @@ aside.tec-docs i{padding-right:1em;}
 
 
 /* Accessibility Fixes */
+.scriptlesssocialsharing__buttons a.twitter{background-color: #1074C1;}
+
+
+
 .pt-cv-view *:focus, *:focus {
 /* 	outline-color: #006FF5 !important; */
 /* 	outline-color: Highlight;
