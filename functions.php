@@ -29,7 +29,40 @@ add_action('astra_primary_content_bottom', 'add_tec_docs');
 function add_tec_docs()
 {
     if (is_singular(array( 'events', 'page', 'post' )) and !is_front_page()) {
-  
+// START
+        if (have_rows('files')) : ?>
+<aside class="page type-page status-publish ast-article-single tec-docs" style="margin-top:20px;">
+<h3><i class="fas fa-file-alt"></i>Document(s)</h3>
+    <ul class="tec-docs" style="list-style:none;margin-left:0;">
+            <?php while (have_rows('files')) :
+                the_row();
+        
+        // vars
+                $localdoc = get_sub_field('document');
+        
+                ?>
+
+        <li class="tec-doc">
+                <?php if ($localdoc) : ?>
+                <img style="height:20px;" src="<?php echo $localdoc['icon']; ?>" alt="<?php echo $localdoc['title']; ?>"><a href="<?php echo $localdoc['url']; ?>"></img>
+                <?php endif; ?>
+                <?php echo $localdoc['title']; ?> (<?php echo $localdoc['subtype']; ?>)
+                <?php if ($localdoc) : ?>
+                </a>
+                <?php endif; ?>
+        </li>
+            <?php endwhile; ?>
+    </ul>
+</aside>
+        <?php endif; ?>
+        <?php if (!have_rows('files')) :
+            ?> <?php
+        endif; ?>
+        <?php
+// END
+
+
+
         // Output Twitter Share button - via plugin
         echo "<br>";
         echo do_shortcode('[scriptless]');
