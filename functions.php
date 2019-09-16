@@ -23,13 +23,14 @@ function child_enqueue_shiz() {
 add_action( 'wp_enqueue_scripts', 'child_enqueue_shiz', 15 );
 
 
-
-
-if ( is_singular( array( 'events' ) ) ) {
-	// if ( is_singular( array( 'event', 'page', 'post' ) ) ) {
-    // echo get_post_type();
-    
+//Add Astra Hooks - Docs
+add_action( 'astra_primary_content_bottom', 'add_tec_docs' );
+function add_tec_docs() {
+    if ( is_singular( array( 'events' ) ) ) {
+    	echo "<p>docs here</p>";
+	}
 }
+
 
 
 
