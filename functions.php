@@ -14,15 +14,55 @@
 define( 'CHILD_THEME_TEC_VERSION', '1.0.0' );
 
 /**
- * Enqueue styles
+ * Enqueue styles & javascript
  */
-function child_enqueue_styles() {
-
+function child_enqueue_shiz() {
 	wp_enqueue_style( 'tec-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_TEC_VERSION, 'all' );
-
+	wp_enqueue_script('tec-theme-js', get_stylesheet_directory_uri() . '/tec-focus.js',  array() , CHILD_THEME_TEC_VERSION, false );)
 }
-
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
+
+
+
+
+// Shortcode to render edit button where we want it
+add_shortcode( 'tec_edit_button', function () {
+	$out = edit_post_link('Edit This','','','','tec-edit-button');
+	return $out;
+} );
+
+
+// Shortcode to calculate a date range
+add_shortcode( 'tec_event_range', function () {
+	if( get_field('when_end') ):
+					$startdate = new DateTime(get_field('when', false, false));
+					$endate = new DateTime(get_field('when_end', false, false));
+					
+					if ( $startdate->format('F') !=  $endate->format('F')):
+						$out = $startdate->format('j M Y') . ' - ' . $endate->format('j M Y');
+					endif;
+					
+					if ( $startdate->format('F') ==  $endate->format('F')):
+						$out = $startdate->format('j') . ' - ' . $endate->format('j F Y');
+					endif;	
+	
+					 	
+	elseif (!get_field('when_end')):
+					$out = get_field('when');
+	endif;
+					return $out;
+});
+
+
+//Set default image for event content types
+add_filter('acf/prepare_field/name=event-image', 'acf_use_default_image');
+
+function acf_use_default_image($field) {
+    if ($field['value'] === null) {
+        $field['value'] = 354; // attachment id
+    }
+    return $field;
+}
 
 
 // Add "nocookie" To WordPress oEmbeded Youtube Videos
@@ -101,13 +141,3 @@ function tec_remove_sidebar(){
 	
 }
 add_action( 'wp', 'tec_remove_sidebar' );
-
-
-
-
-// add_filter( 'pt_cv_field_thumbnail_nolink', '__return_true' );
-// Content Views Pro - Show thumbnail without hyperlink
-
-
-
-
