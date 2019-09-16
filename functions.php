@@ -27,10 +27,8 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_shiz', 15 );
 
 if ( is_singular( array( 'event' ) ) ) {
 	// if ( is_singular( array( 'event', 'page', 'post' ) ) ) {
-    echo get_post_type();
+    
 }
-
-
 
 
 
@@ -44,6 +42,7 @@ if ( is_singular( array( 'event' ) ) ) {
 // Shortcode to render edit button where we want it
 add_shortcode( 'tec_edit_button', function () {
 	$out = edit_post_link('Edit This','','','','tec-edit-button');
+	echo get_post_type();
 	return $out;
 } );
 
