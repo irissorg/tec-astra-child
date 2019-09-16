@@ -29,15 +29,7 @@ add_action('astra_primary_content_bottom', 'add_tec_docs');
 function add_tec_docs()
 {
     if (is_singular(array( 'events', 'page', 'post' )) and !is_front_page()) {
-        
-
-
-
-
-
-
-
-
+  
         // Output Twitter Share button - via plugin
         echo "<br>";
         echo do_shortcode('[scriptless]');
