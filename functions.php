@@ -27,7 +27,7 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_shiz', 15 );
 
 if ( is_singular( array( 'event' ) ) ) {
 	// if ( is_singular( array( 'event', 'page', 'post' ) ) ) {
-    echo 'X';
+    echo get_post_type();
 }
 
 
