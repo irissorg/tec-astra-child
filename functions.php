@@ -26,21 +26,19 @@ add_action('wp_enqueue_scripts', 'child_enqueue_shiz', 15);
 
 //Add Astra Hooks - Docs
 add_action('astra_primary_content_bottom', 'add_tec_docs');
-function add_tec_docs()
-{
+
+
+function add_tec_docs(){
     if (is_singular(array( 'events', 'page', 'post' )) and !is_front_page()) {
-// START
+// START LOOP FOR ATTACHMENTS
         if (have_rows('files')) : ?>
 <aside class="page type-page status-publish ast-article-single tec-docs" style="margin-top:20px;">
 <h3><i class="fas fa-file-alt"></i>Document(s)</h3>
     <ul class="tec-docs" style="list-style:none;margin-left:0;">
             <?php while (have_rows('files')) :
                 the_row();
-        
-        // vars
                 $localdoc = get_sub_field('document');
-        
-                ?>
+            ?>
 
         <li class="tec-doc">
                 <?php if ($localdoc) : ?>
@@ -59,10 +57,9 @@ function add_tec_docs()
             ?> <?php
         endif; ?>
         <?php
-// END
+// END LOOP FOR ATTACHMENTS
 
-
-
+        
         // Output Twitter Share button - via plugin
         echo "<br>";
         echo do_shortcode('[scriptless]');
