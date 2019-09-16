@@ -20,7 +20,7 @@ function child_enqueue_shiz() {
 	wp_enqueue_style( 'tec-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_TEC_VERSION, 'all' );
 	wp_enqueue_script('tec-theme-js', get_stylesheet_directory_uri() . '/tec-focus.js',  array() , CHILD_THEME_TEC_VERSION, 'all' );
 }
-add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
+add_action( 'wp_enqueue_scripts', 'child_enqueue_shiz', 15 );
 
 
 
