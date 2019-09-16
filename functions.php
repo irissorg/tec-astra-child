@@ -29,33 +29,7 @@ add_action('astra_primary_content_bottom', 'add_tec_docs');
 function add_tec_docs()
 {
     if (is_singular(array( 'events', 'page', 'post' )) and !is_front_page()) {
-        // START
-        if (have_rows('files')) :
-            echo '<aside class="page type-page status-publish ast-article-single tec-docs" style="margin-top:20px;">';
-            echo '<h3><i class="fas fa-file-alt"></i>Documents</h3>';
-            echo '<ul class="tec-docs" style="list-style:none;margin-left:0;">';
-            while (have_rows('files')) :
-                the_row();
-                $localdoc = get_sub_field('document');
-                echo '<li class="tec-doc">';
-                if ($localdoc) :
-                    echo '<img style="height:20px;" src="'  .echo $localdoc['icon'];
-                    .   " alt=".echo $localdoc['title'];
-                    .   '"><a href="'   .echo $localdoc['url'];.        '"></img>'
-                endif
-                echo $localdoc['title'];
-                echo '('.$localdoc['subtype'].')';
-                if ($localdoc) :
-                    echo '</a>';
-                endif;
-                echo '</li>';
-            endwhile;
-            echo '</ul>';
-            echo '</aside>';
-        endif;
-        if (!have_rows('files')) :
-        endif;
-// END
+        
 
 
 
