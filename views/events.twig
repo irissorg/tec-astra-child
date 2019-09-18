@@ -15,9 +15,9 @@
 
 
 
-{% if post.meta('group').booking_page %}
-   <a class="button booknow" href="{{ post.meta('group').booking_page }}">Book now</a>
-{% elseif not post.meta('group').booking_page %}
+{% if post.meta.booking_page %}
+   <a class="button booknow" href="{{ post.meta.booking_page }}">Book now</a>
+{% elseif not post.meta.booking_page %}
    <span class="button bookclosed"><i class="fas fa-lock"></i> Booking closed</span>
 {% endif %}
 
