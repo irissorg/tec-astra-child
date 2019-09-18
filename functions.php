@@ -44,8 +44,10 @@ function add_tec_docs(){
 add_action('astra_sidebars_before', 'add_tec_events');
 function add_tec_events(){
     if (is_singular(array( 'events' )) and !is_front_page() and is_user_logged_in()) {
-
-
+        $context = Timber::get_context();
+        $post = new TimberPost();
+        $context['post'] = $post;
+        Timber::render( 'events.twig', $context );
         // Output Twitter Share button - via plugin
         // echo do_shortcode('[scriptless]');
     }
