@@ -32,6 +32,7 @@ function add_tec_docs(){
         $context = Timber::get_context();
         $post = new TimberPost();
         $context['post'] = $post;
+        $context['extras'] = get_field( "enquiries-email" );
         Timber::render( 'documents.twig', $context );
     }
 }
