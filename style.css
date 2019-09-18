@@ -37,9 +37,6 @@ aside.tec-docs ul li img{
 	height:20px;
 	padding-right: 10px;
 }
-aside.tec-docs ul li a::after{
-	color: red;
-}
 
 
 
