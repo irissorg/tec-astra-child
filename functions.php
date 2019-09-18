@@ -33,6 +33,7 @@ function add_tec_docs(){
         $post = new TimberPost();
         $context['post'] = $post;
         $context['extras'] = get_field( "enquiries-email" );
+        echo "HERE: " . get_field( "enquiries-email" );
         Timber::render( 'documents.twig', $context );
     }
 }
