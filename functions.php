@@ -28,8 +28,16 @@ add_action('wp_enqueue_scripts', 'child_enqueue_shiz', 15);
 add_action('astra_primary_content_bottom', 'add_tec_docs');
 
 
-function add_tec_docs(){
+function add_tec_docs()
+{
     if (is_singular(array( 'events', 'page', 'post' )) and !is_front_page()) {
+        $context = array();
+        $context['sometitle'] = 'Docs here';
+        Timber::render('documents.twig', $context);
+
+
+
+
 // START LOOP FOR ATTACHMENTS
         if (have_rows('files')) : ?>
 <aside class="page type-page status-publish ast-article-single tec-docs" style="margin-top:20px;">
@@ -38,7 +46,7 @@ function add_tec_docs(){
             <?php while (have_rows('files')) :
                 the_row();
                 $localdoc = get_sub_field('document');
-            ?>
+                ?>
 
         <li class="tec-doc">
                 <?php if ($localdoc) : ?>
@@ -97,9 +105,9 @@ add_shortcode('tec_event_range', function () {
         if ($startdate->format('F') ==  $endate->format('F')) :
             $out = $startdate->format('j') . ' - ' . $endate->format('j F Y');
         endif;
-    elseif (!get_field('when_end')) :
+        elseif (!get_field('when_end')) :
                     $out = get_field('when');
-        endif;
+    endif;
                     return $out;
 });
 
