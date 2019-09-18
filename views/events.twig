@@ -15,10 +15,10 @@
 
 
 
-{% if post.meta.booking_page %}
-   <a class="button booknow" href="{{ post.meta.booking_page }}">Book now</a>
-{% elseif not post.meta.booking_page %}
-   <span class="button bookclosed"><i class="fas fa-lock"></i> Booking closed {{ post.meta.booking_page }}</span>
+{% if post.booking_page %}
+   <a class="button booknow" href="{{ post.booking_page }}">Book now</a>
+{% elseif not post.booking_page %}
+   <span class="button bookclosed"><i class="fas fa-lock"></i> Booking closed {{ post.booking_page }}</span>
 {% endif %}
 
 	</div>
