@@ -11,7 +11,10 @@ Template: astra
 */
 /* .ast-no-sidebar.ast-separate-container .entry-content .alignfull{margin-right:inherit;margin-left:inherit;} */
 
-.mute{color: #595959;}
+.mute{
+	color: #595959;
+	font-size: 0.8em;
+}
 
 
 
