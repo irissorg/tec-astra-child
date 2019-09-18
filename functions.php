@@ -40,8 +40,8 @@ function add_tec_docs()
         // More testing twig
         $context = Timber::get_context();
         $post = new TimberPost();
-        // $context['post'] = $post;
-        $context["acf"] = get_field_objects($data["post"]->ID);
+        $context['post'] = $post;
+        // $context["acf"] = get_field_objects($data["post"]->ID);
         Timber::render( 'documents.twig', $context );
 
 
