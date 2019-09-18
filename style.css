@@ -13,13 +13,22 @@ Template: astra
 
 /* Documents */
 aside.tec-docs{
-	
+	margin-top:20px;
 }
 aside.tec-docs h3{
 	background-color: #eee;
 	padding:15px;
 	margin-bottom:1em;
 }
+aside.tec-docs ul{
+	list-style:none;margin-left:0;
+}
+aside.tec-docs ul li img{
+	height:20px;
+}
+
+
+
 aside.tec-docs i{padding-right:1em;}
 /* Events */
 .event-details-single-inner{

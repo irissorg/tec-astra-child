@@ -26,61 +26,15 @@ add_action('wp_enqueue_scripts', 'child_enqueue_shiz', 15);
 
 //Add Astra Hooks - Docs
 add_action('astra_primary_content_bottom', 'add_tec_docs');
-
-
-function add_tec_docs()
-{
+function add_tec_docs(){
     if (is_singular(array( 'events', 'page', 'post' )) and !is_front_page()) {
-
-        // testing twig
-        // $context = array();
-        // $context['sometitle'] = 'Docs here';
-        // Timber::render('documents.twig', $context);
 
         // More testing twig
         $context = Timber::get_context();
         $post = new TimberPost();
         $context['post'] = $post;
-        // $context["acf"] = get_field_objects($data["post"]->ID);
-        // Timber::render( 'documents.twig', $context );
-
-
-        
-        
-
-
-// START LOOP FOR ATTACHMENTS
-        if (have_rows('files')) : ?>
-<aside class="page type-page status-publish ast-article-single tec-docs" style="margin-top:20px;">
-<h3><i class="fas fa-file-alt"></i>Document(s)</h3>
-    <ul class="tec-docs" style="list-style:none;margin-left:0;">
-            <?php while (have_rows('files')) :
-                the_row();
-                $localdoc = get_sub_field('document');
-                ?>
-
-        <li class="tec-doc">
-                <?php if ($localdoc) : ?>
-                <img style="height:20px;" src="<?php echo $localdoc['icon']; ?>" alt="<?php echo $localdoc['title']; ?>"><a href="<?php echo $localdoc['url']; ?>"></img>
-                <?php endif; ?>
-                <?php echo $localdoc['title']; ?> (<?php echo $localdoc['subtype']; ?>)
-                <?php if ($localdoc) : ?>
-                </a>
-                <?php endif; ?>
-        </li>
-            <?php endwhile; ?>
-    </ul>
-</aside>
-        <?php endif; ?>
-        <?php if (!have_rows('files')) :
-            ?> <?php
-        endif; ?>
-        <?php
-// END LOOP FOR ATTACHMENTS
-
-        
+        Timber::render( 'documents.twig', $context );
         // Output Twitter Share button - via plugin
-        echo "<br>";
         echo do_shortcode('[scriptless]');
     }
 }
@@ -89,16 +43,9 @@ function add_tec_docs()
 
 
 
-
-
-
-
-
-
 // Shortcode to render edit button where we want it
 add_shortcode('tec_edit_button', function () {
     $out = edit_post_link('Edit This', '', '', '', 'tec-edit-button');
-    
     return $out;
 });
 
@@ -106,8 +53,8 @@ add_shortcode('tec_edit_button', function () {
 // Shortcode to calculate a date range
 add_shortcode('tec_event_range', function () {
     if (get_field('when_end')) :
-                    $startdate = new DateTime(get_field('when', false, false));
-                    $endate = new DateTime(get_field('when_end', false, false));
+            $startdate = new DateTime(get_field('when', false, false));
+            $endate = new DateTime(get_field('when_end', false, false));
                     
         if ($startdate->format('F') !=  $endate->format('F')) :
             $out = $startdate->format('j M Y') . ' - ' . $endate->format('j M Y');
