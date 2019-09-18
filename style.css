@@ -22,7 +22,8 @@ aside.tec-docs h3{
 	margin-bottom:1em;
 }
 aside.tec-docs ul{
-	list-style:none;margin-left:0;
+	list-style:none;
+	margin-left:20px;
 }
 aside.tec-docs ul li{
 	padding-bottom: 10px;
