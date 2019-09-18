@@ -26,18 +26,24 @@ add_action('wp_enqueue_scripts', 'child_enqueue_shiz', 15);
 
 //Add Astra Hooks - Docs
 add_action('astra_primary_content_bottom', 'add_tec_docs');
+add_action('astra_primary_content_bottom', 'add_tec_share');
 function add_tec_docs(){
     if (is_singular(array( 'events', 'page', 'post' )) and !is_front_page() and have_rows('files') ) {
-
-        // More testing twig
         $context = Timber::get_context();
         $post = new TimberPost();
         $context['post'] = $post;
         Timber::render( 'documents.twig', $context );
+    }
+}
+
+function add_tec_share(){
+    if (is_singular(array( 'events', 'page', 'post' )) and !is_front_page()) {
         // Output Twitter Share button - via plugin
         echo do_shortcode('[scriptless]');
     }
 }
+
+
 
 
 //Astra Hook - Events
