@@ -53,7 +53,7 @@ function add_tec_events(){
         $context = Timber::get_context();
         $post = new TimberPost();
         $context['post'] = $post;
-        $context['enquiries-email'] = get_field( "enquiries-email" );
+        $context['email'] = get_field( "enquiries-email" );
         Timber::render( 'events.twig', $context );
         // Output Twitter Share button - via plugin
         // echo do_shortcode('[scriptless]');
