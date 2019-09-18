@@ -1,6 +1,7 @@
 <div class="event-details-single-outer">
 	<h2>When and Where</h2>
 	<div class="event-details-single-inner">
+		<ul>
 
 
 
@@ -8,12 +9,18 @@
 
 
 
+{% if post.third_party_event  %}
+	<li>
+		<i class="fas fa-exclamation-circle tec-icons"></i> 
+		<span>This event is not organised by the TEC programme. 
+			{% if post.enquiries-email %}Please direct any enquiries to <a href="mailto:{{ post.enquiries-email }}">{{ post.enquiries-email }}</a>{% endif %}
+		</span>
+	</li>
+{% endif %}
 
 
 
-
-
-
+	</ul>
 
 {% if post.booking_page %}
    <a class="button booknow" href="{{ post.booking_page }}">Book now</a>
