@@ -1,0 +1,25 @@
+<div class="event-details-single-outer">
+	<h2>When and Where</h2>
+	<div class="event-details-single-inner">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% if post.meta('group').booking_page %}
+   <a class="button booknow" href="{{ post.meta('group').booking_page }}">Book now</a>
+{% elseif not post.meta('group').booking_page %}
+   <span class="button bookclosed"><i class="fas fa-lock"></i> Booking closed</span>
+{% endif %}
+
+	</div>
+</div>

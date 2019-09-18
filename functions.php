@@ -40,7 +40,16 @@ function add_tec_docs(){
 }
 
 
+//Astra Hook - Events
+add_action('astra_sidebars_before', 'add_tec_events');
+function add_tec_events(){
+    if (is_singular(array( 'events' )) and !is_front_page() and is_user_logged_in()) {
 
+
+        // Output Twitter Share button - via plugin
+        // echo do_shortcode('[scriptless]');
+    }
+}
 
 
 // Shortcode to render edit button where we want it
