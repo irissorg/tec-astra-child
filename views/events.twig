@@ -9,7 +9,7 @@
 
 
 
-{% if post.third_party_event  %}
+{% if post.third_party_event %}
 	<li>
 		<i class="fas fa-exclamation-circle tec-icons"></i> 
 		<span>This event is not organised by the TEC programme. 
@@ -17,6 +17,8 @@
 				Please direct any enquiries to <a href="mailto:{{ post.enquiries-email }}">{{ post.enquiries-email }}</a>
 		</span>
 	</li>
+	{% else %}
+		
 {% endif %}
 
 
