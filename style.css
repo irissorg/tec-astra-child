@@ -23,8 +23,12 @@ aside.tec-docs h3{
 aside.tec-docs ul{
 	list-style:none;margin-left:0;
 }
+aside.tec-docs ul li{
+	padding-bottom: 10px;
+}
 aside.tec-docs ul li img{
 	height:20px;
+	padding-right: 10px;
 }
 
 

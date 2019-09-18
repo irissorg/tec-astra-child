@@ -2,7 +2,7 @@
 	<h3><i class="fas fa-file-alt"></i>Document(s)</h3>
 	<ul>
 		{% for item in post.meta('files') %}
-			<li><img src="{{ item.document.icon }}" alt="{{ item.document.title }}"><a href="{{ item.document.url }}"></img> {{ item.document.title }}({{ item.document.subtype }})</a></li>
+			<li><img src="{{ item.document.icon }}" alt="{{ item.document.title }}"><a href="{{ item.document.url }}"></img>{{ item.document.title }}({{ item.document.subtype }})</a></li>
 		{% endfor %}
 	</ul>
 </aside>
