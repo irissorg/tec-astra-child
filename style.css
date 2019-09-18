@@ -11,6 +11,11 @@ Template: astra
 */
 /* .ast-no-sidebar.ast-separate-container .entry-content .alignfull{margin-right:inherit;margin-left:inherit;} */
 
+.mute{color: #595959;}
+
+
+
+
 /* Documents */
 aside.tec-docs{
 	margin-top:20px;
@@ -31,6 +36,9 @@ aside.tec-docs ul li{
 aside.tec-docs ul li img{
 	height:20px;
 	padding-right: 10px;
+}
+aside.tec-docs ul li a::after{
+	color: red;
 }
 
 
