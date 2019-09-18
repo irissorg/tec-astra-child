@@ -13,13 +13,13 @@
 	<li>
 		<i class="fas fa-exclamation-circle tec-icons"></i> 
 		<span>This event is not organised by the TEC programme. 
-			{% elseif  post.enquiries-email %}
-				Please direct any enquiries to <a href="mailto:{{ post.enquiries-email }}">{{ post.enquiries-email }}</a>
+{% endif %}			
+			{% if  post.enquiries-email %}Please direct any enquiries to <a href="mailto:{{ post.enquiries-email }}">{{ post.enquiries-email }}</a>{% endif %}
+		{% if post.third_party_event %}
 		</span>
 	</li>
-	{% else %}
-		
-{% endif %}
+{% endif %}	
+
 
 
 
