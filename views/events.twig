@@ -2,10 +2,7 @@
 	<h2>When and Where</h2>
 	<div class="event-details-single-inner">
 		<ul>
-
-
-
-FINAL: {{ post.enquiries-email }}
+			
 
 <li><i class="fas fa-map-marker-alt tec-icons"></i> <span>{{ post.where }}</span></li>
 
@@ -14,7 +11,7 @@ FINAL: {{ post.enquiries-email }}
 		<i class="fas fa-exclamation-circle tec-icons"></i> 
 		<span>This event is not organised by the TEC programme.
 {% endif %}			
-			{% if extras %}Please direct any enquiries to <a href="mailto:{{ extras }}">{{ extras }}</a>{% endif %}
+			{% if enquiries-email %}Please direct any enquiries to <a href="mailto:{{ enquiries-email }}">{{ enquiries-email }}</a>{% endif %}
 		{% if post.third_party_event %}
 		</span>
 	</li>
