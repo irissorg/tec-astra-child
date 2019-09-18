@@ -31,11 +31,22 @@ add_action('astra_primary_content_bottom', 'add_tec_docs');
 function add_tec_docs()
 {
     if (is_singular(array( 'events', 'page', 'post' )) and !is_front_page()) {
-        $context = array();
-        $context['sometitle'] = 'Docs here';
-        Timber::render('documents.twig', $context);
+
+        // testing twig
+        // $context = array();
+        // $context['sometitle'] = 'Docs here';
+        // Timber::render('documents.twig', $context);
+
+        // More testing twig
+        $context = Timber::get_context();
+        $post = new TimberPost();
+        // $context['post'] = $post;
+        $context["acf"] = get_field_objects($data["post"]->ID);
+        Timber::render( 'documents.twig', $context );
 
 
+        
+        
 
 
 // START LOOP FOR ATTACHMENTS
