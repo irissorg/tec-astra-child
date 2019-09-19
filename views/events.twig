@@ -4,6 +4,26 @@
 		<ul>
 
 
+
+{% if post.start_time %}
+<li class="tec-icons-dense"><i class="fas fa-clock tec-icons" aria-hidden="true"></i> 
+	<span>
+ 		{{ post.start_time }}{% if post.end_time %} -  {{ post.end-time }}{% endif %}
+	</span>
+</li>
+{% endif %}
+
+
+{% if post.hashtag %}
+
+<li><i class="fab fa-twitter tec-icons" aria-hidden="true" aria-label="Twitter tag for this event"></i> 
+	<span>
+		<a title="Twitter tag for this event" href="https://twitter.com/hashtag/{{ post.hashtag }}">{{ post.hashtag }}</a>
+	</span>
+</li>
+{% endif %}
+
+
 <li><i class="fas fa-map-marker-alt tec-icons"></i> <span>{{ post.where }}</span></li>
 
 {% if post.third_party_event %}
@@ -15,11 +35,7 @@
 		{% if post.third_party_event %}
 		</span>
 	</li>
-{% endif %}	
-
-
-
-
+{% endif %}
 	</ul>
 
 {% if post.booking_page %}
