@@ -9,13 +9,13 @@
 
 
 // if we have a multi-day event
-{% if post.when_end && spanmonths==false) %}
+{% if post.when_end && spanmonths==false %}
     <i class="fas fa-calendar-alt tec-icons"></i> <span>{{ post.when|date('j') }} - {{ post.when_end|date('j F Y') }}</span>
     </li>
 {% endif %}
 
 //if we have a multi-day event that spans months
-{% if post.when_end && spanmonths==true) %}
+{% if post.when_end && spanmonths==true %}
     <i class="fas fa-calendar-alt tec-icons"></i> <span>{{ post.when|date('j F Y') }} - {{ post.when_end|date('j F Y') }}</span>
     </li>
 {% endif %}
