@@ -5,13 +5,13 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package TEC
- * @since 1.0.0
+ * @since 2.0.0
  */
 
 /**
  * Define Constants
  */
-define('CHILD_THEME_TEC_VERSION', '1.0.0');
+define('CHILD_THEME_TEC_VERSION', '2.0.0');
 
 /**
  * Enqueue styles & javascript
