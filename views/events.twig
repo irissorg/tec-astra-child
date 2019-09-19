@@ -8,14 +8,13 @@
 {% if post.start_time %}
 <li class="tec-icons-dense"><i class="fas fa-clock tec-icons" aria-hidden="true"></i> 
 	<span>
- 		{{ post.start_time }}{% if post.end_time %} - {{ post.end_time }}{% endif %}
+ 		{{ post.start_time.format('U') }}{% if post.end_time %} - {{ post.end_time }}{% endif %}
 	</span>
 </li>
 {% endif %}
 
 
 {% if post.hashtag %}
-
 <li><i class="fab fa-twitter tec-icons" aria-hidden="true" aria-label="Twitter tag for this event"></i> 
 	<span>
 		<a title="Twitter tag for this event" href="https://twitter.com/hashtag/{{ post.hashtag }}">{{ post.hashtag }}</a>
