@@ -5,6 +5,32 @@
 
 
 
+<li class='when'>
+
+
+
+
+
+
+
+
+<!-- if we have a single day event -->
+{% if not post.when_end %}
+<i class="fas fa-calendar-alt tec-icons"></i> <span>{{ post.when }}</span>
+</li>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
 {% if post.start_time %}
 <li class="tec-icons-dense"><i class="fas fa-clock tec-icons" aria-hidden="true"></i>
 	<span>
