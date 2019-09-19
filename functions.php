@@ -97,7 +97,7 @@ add_shortcode('tec_event_range', function () {
 
 
 //Set default image for event content types
-add_filter('acf/prepare_field/name=event-image', 'acf_use_default_image');
+add_filter('acf/prepare_field/name=event_image', 'acf_use_default_image');
 
 function acf_use_default_image($field)
 {
