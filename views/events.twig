@@ -16,7 +16,7 @@
 
 <!-- if we have a single day event -->
 {% if not post.when_end %}
-<i class="fas fa-calendar-alt tec-icons"></i> <span>{{ post.when }}</span>
+<i class="fas fa-calendar-alt tec-icons"></i> <span>{{ post.when|date('j F Y') }}</span>
 </li>
 {% endif %}
 
