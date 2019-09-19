@@ -54,7 +54,15 @@ function add_tec_events(){
         $post = new TimberPost();
         $context['post'] = $post;
 
-            
+            // Do we span months?
+            $context['spanmonths'] = false;
+            // if (get_field('when_end', false, false){
+            //         $sdate = new DateTime(get_field('when', false, false));
+            //         $edate = new DateTime(get_field('when_end', false, false));
+            //     if ($edate->format('F') !=  $sdate->format('F')){
+            //             $context['spanmonths'] = true;
+            //     }
+            // }
 
         Timber::render( 'events.twig', $context );
         // Output Twitter Share button - via plugin
