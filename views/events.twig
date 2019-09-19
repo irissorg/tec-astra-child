@@ -7,12 +7,8 @@
 
 {% if post.start_time %}
 <li class="tec-icons-dense"><i class="fas fa-clock tec-icons" aria-hidden="true"></i>
-
-	start is {{ post.start_time|date('g:i a') }}
-	<br>
-	end time is {{ post.end_time|date('g:i a') }}
 	<span>
- 		{{ post.start_time }}{% if post.end_time %} - {{ post.end_time }}{% endif %}
+ 		{{ post.start_time|date('g:i a') }}{% if post.end_time %} - {{ post.end_time|date('g:i a') }}{% endif %}
 	</span>
 </li>
 {% endif %}
