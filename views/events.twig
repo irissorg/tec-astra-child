@@ -2,76 +2,67 @@
 	<h2>When and Where</h2>
 	<div class="event-details-single-inner">
 		<ul>
+		<li class='when'>
+		{# if we have a multi-day event #}
+		{% if post.when_end and spanmonths == false %}
+		    <i class="fas fa-calendar-alt tec-icons"></i> <span>{{ post.when|date('j') }} - {{ post.when_end|date('j F Y') }}</span>
+		    </li>
+		{% endif %}
 
+		{# if we have a multi-day event that spans months #}
+		{% if post.when_end and spanmonths == true %}
+		    <i class="fas fa-calendar-alt tec-icons"></i> <span>{{ post.when|date('j F Y') }} - {{ post.when_end|date('j F Y') }}</span>
+		    </li>
+		{% endif %}
 
+		{# if we have a single day event #}
+		{% if not post.when_end %}
+		<i class="fas fa-calendar-alt tec-icons"></i> <span>{{ post.when|date('j F Y') }}</span>
+		</li>
+		{% endif %}
 
-<li class='when'>
-{# if we have a multi-day event #}
-{% if post.when_end and spanmonths == false %}
-    <i class="fas fa-calendar-alt tec-icons"></i> <span>{{ post.when|date('j') }} - {{ post.when_end|date('j F Y') }}</span>
-    </li>
-{% endif %}
+		{# START TIME #}
+		{% if post.start_time %}
+		<li class="tec-icons-dense"><i class="fas fa-clock tec-icons" aria-hidden="true"></i>
+			<span>
+		 		{{ post.start_time|date('g:i a') }}{% if post.end_time %} - {{ post.end_time|date('g:i a') }}{% endif %}
+			</span>
+		</li>
+		{% endif %}
 
-{# if we have a multi-day event that spans months #}
-{% if post.when_end and spanmonths == true %}
-    <i class="fas fa-calendar-alt tec-icons"></i> <span>{{ post.when|date('j F Y') }} - {{ post.when_end|date('j F Y') }}</span>
-    </li>
-{% endif %}
+		{# HASHTAG #}
+		{% if post.hashtag %}
+		<li><i class="fab fa-twitter tec-icons" aria-hidden="true" aria-label="Twitter tag for this event"></i>
+			<span>
+				<a title="Twitter tag for this event" href="https://twitter.com/hashtag/{{ post.hashtag }}">{{ post.hashtag }}</a>
+			</span>
+		</li>
+		{% endif %}
 
-{# if we have a single day event #}
-{% if not post.when_end %}
-<i class="fas fa-calendar-alt tec-icons"></i> <span>{{ post.when|date('j F Y') }}</span>
-</li>
-{% endif %}
+		{# LOCATION #}
+		<li>
+			<i class="fas fa-map-marker-alt tec-icons"></i> <span>{{ post.where }}</span>
+		</li>
 
-
-
-
-
-
-
-
-
-
-
-
-{% if post.start_time %}
-<li class="tec-icons-dense"><i class="fas fa-clock tec-icons" aria-hidden="true"></i>
-	<span>
- 		{{ post.start_time|date('g:i a') }}{% if post.end_time %} - {{ post.end_time|date('g:i a') }}{% endif %}
-	</span>
-</li>
-{% endif %}
-
-
-{% if post.hashtag %}
-<li><i class="fab fa-twitter tec-icons" aria-hidden="true" aria-label="Twitter tag for this event"></i>
-	<span>
-		<a title="Twitter tag for this event" href="https://twitter.com/hashtag/{{ post.hashtag }}">{{ post.hashtag }}</a>
-	</span>
-</li>
-{% endif %}
-
-
-<li><i class="fas fa-map-marker-alt tec-icons"></i> <span>{{ post.where }}</span></li>
-
-{% if post.third_party_event %}
-	<li>
-		<i class="fas fa-exclamation-circle tec-icons"></i> 
-		<span>This event is not organised by the TEC programme.
-{% endif %}			
-			{% if post.enquiries_email %}Please direct any enquiries to <a href="mailto:{{ post.enquiries_email }}">{{ post.enquiries_email }}</a>{% endif %}
+		{# THIRD PARTY EVENT - NON TEC #}
 		{% if post.third_party_event %}
-		</span>
-	</li>
-{% endif %}
+			<li>
+				<i class="fas fa-exclamation-circle tec-icons"></i> 
+				<span>This event is not organised by the TEC programme.
+		{% endif %}			
+					{% if post.enquiries_email %}Please direct any enquiries to <a href="mailto:{{ post.enquiries_email }}">{{ post.enquiries_email }}</a>{% endif %}
+				{% if post.third_party_event %}
+				</span>
+			</li>
+		{% endif %}
 	</ul>
 
-{% if post.booking_page %}
-   <a class="button booknow" href="{{ post.booking_page }}">Book now</a>
-{% elseif not post.booking_page %}
-   <span class="button bookclosed"><i class="fas fa-lock"></i> Booking closed {{ post.booking_page }}</span>
-{% endif %}
+	{# BOOKING BUTTON #}
+	{% if post.booking_page %}
+	   <a class="button booknow" href="{{ post.booking_page }}">Book now</a>
+	{% elseif not post.booking_page %}
+	   <span class="button bookclosed"><i class="fas fa-lock"></i> Booking closed {{ post.booking_page }}</span>
+	{% endif %}
 
 	</div>
 </div>
