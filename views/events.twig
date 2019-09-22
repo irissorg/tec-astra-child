@@ -59,7 +59,7 @@
 
 	{# BOOKING BUTTON #}
 	{% if post.booking_page %}
-	   <a class="button booknow" href="{{ post.booking_page }}">Book now</a>
+	   <a class="button booknow" href="{{ post.booking_page }}">Book event</a>
 	{% elseif not post.booking_page %}
 	   <span class="button bookclosed"><i class="fas fa-lock"></i> Booking closed {{ post.booking_page }}</span>
 	{% endif %}
