@@ -23,4 +23,4 @@ https://twitter.com/intent/tweet?text=Scottish%20Digital%20Health%20and%20Care%2
 <br>
 <br>
 {# {{ 'https://twitter.com/intent/tweet?text=' post.title ~ post.permalink '&via=tecscotland&related=tecscotland'|e('esc_url') }} #}
-{{ 'https://twitter.com/intent/tweet?text=' ~ post.title ~ post.permalink ~ '&via=tecscotland&related=tecscotland' }}
+{{ 'https://twitter.com/intent/tweet?text=' ~ post.title ~ '&url=' ~ post.permalink ~ '&via=tecscotland&related=tecscotland'|e('esc_url') }}
