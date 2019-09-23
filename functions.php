@@ -47,7 +47,7 @@ function add_tec_share(){
 }
 
 function add_tec_share_new(){
-    if (is_singular(array( 'events', 'page', 'post' )) and !is_front_page() and is_user_logged_in()) {
+    if (is_singular(array( 'events', 'page', 'post' )) and !is_front_page()) {
         $context = Timber::get_context();
         $post = new TimberPost();
         $context['post'] = $post;
