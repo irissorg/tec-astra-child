@@ -26,7 +26,7 @@ add_action('wp_enqueue_scripts', 'child_enqueue_shiz', 15);
 
 //Add Astra Hooks - Docs & Share button
 add_action('astra_primary_content_bottom', 'add_tec_docs');
-add_action('astra_primary_content_bottom', 'add_tec_share');
+// add_action('astra_primary_content_bottom', 'add_tec_share');
 add_action('astra_primary_content_bottom', 'add_tec_share_new');
 
 

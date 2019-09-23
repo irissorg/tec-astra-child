@@ -205,12 +205,12 @@ aside.tec-docs i{padding-right:1em;}
 }
 
 .scriptlesssocialsharing .button.twitter {
-	background-color: #595959 !important;)
+	background-color: rgba(85, 172, 238, .8)
 	/* background-color: rgba(85, 172, 238, .8) */
 }
 
 .scriptlesssocialsharing .button.twitter:hover {
-    background-color: #55acee;
+    background-color: #55acee
 }
 
 @media print {
