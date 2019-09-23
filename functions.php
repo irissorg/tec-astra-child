@@ -76,7 +76,7 @@ add_shortcode('tec_edit_button', function () {
 });
 
 
-// Shortcode to calculate a date range
+// Shortcode to calculate a date range, used in the View for the events
 add_shortcode('tec_event_range', function () {
     if (get_field('when_end')) :
             $startdate = new DateTime(get_field('when', false, false));
