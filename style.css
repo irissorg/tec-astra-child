@@ -235,7 +235,8 @@ aside.tec-docs i{padding-right:1em;}
 .scriptlesssocialsharing a.button {
     box-shadow: none;
     font-size: unset;
-    height: auto;
+	height: auto;
+	width: 100%;
     line-height: 1
 }
 
