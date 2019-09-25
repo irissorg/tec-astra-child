@@ -17,7 +17,7 @@ Template: astra
 }
 
 
-#pt-cv-view-f2b9b4c02t .img-rounded, #pt-cv-view-f2b9b4c02t .pt-cv-hover-wrapper {
+div#pt-cv-view-f2b9b4c02t .img-rounded, div#pt-cv-view-f2b9b4c02t .pt-cv-hover-wrapper {
     border-radius: 0px !important;
 }
 
