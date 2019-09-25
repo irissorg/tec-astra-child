@@ -17,6 +17,12 @@ Template: astra
 }
 
 
+#pt-cv-view-f2b9b4c02t .img-rounded, #pt-cv-view-f2b9b4c02t .pt-cv-hover-wrapper {
+    border-radius: 0px !important;
+}
+
+
+
 /* Documents */
 aside.tec-docs{
 	margin-top:20px;
