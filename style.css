@@ -278,7 +278,7 @@ aside.tec-docs i{padding-right:1em;}
 
 
     a.button.booknow::after{
-        content: " (" attr(href) ") ";
+        content: " - " attr(href);
     }
 
     /*fix container widths*/
