@@ -285,7 +285,6 @@ aside.tec-docs i{padding-right:1em;}
     .site-content, div.ast-container, div#secondary, div#primary{
         width: 100%; margin: 0; float: none; max-width: none;
     }
-    div#secondary{padding-left: 0;}
-    .ast-right-sidebar #secondary{ border-left: 0px solid #eee; }
-    .ast-right-sidebar #primary { border-right: 0px solid;}
+    div#secondary{padding-left: 0; border-left: 0px solid #eee;}
+    div#primary { border-right: 0px solid;}
 }
