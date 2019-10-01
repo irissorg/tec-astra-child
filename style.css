@@ -272,5 +272,5 @@ aside.tec-docs i{padding-right:1em;}
     div.footer-adv, div.scriptlesssocialsharing, div.ast-below-header-wrap, div.main-header-bar-navigation, div.ast-header-breadcrumb{
         display: none;
     }
-    div.ast-footer-overlay{background-color: white;color: #3a3a3a; border-top-color: #eaeaea;}
+    div.ast-footer-overlay{background-color: white;color: #3a3a3a; border-top-color: #eaeaea !important;}
 }
