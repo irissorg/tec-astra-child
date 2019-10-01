@@ -282,7 +282,7 @@ aside.tec-docs i{padding-right:1em;}
     }
 
     /*fix container widths*/
-    .site-content, div.ast-container{
+    .site-content, div.ast-container, div#secondary, div#primary{
         width: 100%; margin: 0; float: none; max-width: none;
     }
 
