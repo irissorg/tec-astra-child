@@ -269,11 +269,12 @@ aside.tec-docs i{padding-right:1em;}
 
 /*Print Styles*/
 @media print {
-    div.footer-adv, div.scriptlesssocialsharing, div.ast-below-header-wrap, div.main-header-bar-navigation, div.ast-header-breadcrumb{
+    div.footer-adv, div.scriptlesssocialsharing, div.ast-below-header-wrap, div.main-header-bar-navigation, div.ast-header-breadcrumb, a.booknow{
         display: none;
     }
     div.ast-footer-overlay{background-color: white;color: #3a3a3a;}
     div.ast-small-footer{border-top-color: #eaeaea;}
+
 
     a.booknow::after{
         content: " (" attr(href) ") ";
