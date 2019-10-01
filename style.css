@@ -281,6 +281,11 @@ aside.tec-docs i{padding-right:1em;}
         content: " (" attr(href) ") ";
     }
 
+    /*fix container widths*/
+    .site-content{
+        width: 100%; margin: 0; float: none;
+    }
+
 
 
 }
