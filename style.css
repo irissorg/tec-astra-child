@@ -276,7 +276,7 @@ aside.tec-docs i{padding-right:1em;}
     div.ast-small-footer{border-top-color: #eaeaea;}
 
 
-    a.booknow::after{
+    a.button.booknow::after{
         content: " (" attr(href) ") ";
     }
 
