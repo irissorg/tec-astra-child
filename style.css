@@ -305,5 +305,6 @@ aside.tec-docs i{padding-right:1em;}
         padding-left: 100px; /* Equal to width of new image */
         background-size: contain;
     }
+    div.ast-below-header{display: none;}
     /* .tec-sitelogo{ content:url("https://tec.scot/wp-content/uploads/2019/10/tec-logo-sq-darkmode.png"); } */
 }
