@@ -302,6 +302,12 @@ aside.tec-docs i{padding-right:1em;}
     /* header bar */
     .main-header-bar {border-bottom-color: #26272a;}
 
+    .tec-edit-button {
+        background: #26272a;
+        border-left-color: #26272a;
+        border-right-color: #26272a;
+        color: #cfcfd0;
+    }
 
 
 
