@@ -294,4 +294,6 @@ aside.tec-docs i{padding-right:1em;}
 /* Dark Mode */
 @media (prefers-color-scheme: dark){
     body, .main-header-bar{background-color: black;color: white;}
+    img.custom-logo{ content:url("https://tec.scot/wp-content/uploads/2019/10/tec-logo-sq-darkmode.png"); }
+    /* .tec-sitelogo{ content:url("https://tec.scot/wp-content/uploads/2019/10/tec-logo-sq-darkmode.png"); } */
 }
