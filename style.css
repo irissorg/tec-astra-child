@@ -289,12 +289,9 @@ aside.tec-docs i{padding-right:1em;}
     .ast-right-sidebar #primary { border-right:0px solid #eee; }
 
     .ast-right-sidebar #secondary { border-left: 0px solid #eee; margin-left: -1px;padding-left: 0;}
+}
 
-
-
-
-
-
-
-
+/* Dark Mode */
+@media (prefers-color-scheme: dark){
+    body{background-color: black;color: white;}
 }
