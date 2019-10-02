@@ -299,7 +299,13 @@ aside.tec-docs i{padding-right:1em;}
     /* headers */
     h1, .entry-content h1, h2, .entry-content h2, h3, .entry-content h3{color: #cfcfd0;}
 
-
+    /* links */
+    .content-area p a, .content-area li a {
+        border-bottom-color: #cfcfd0;
+    }
+    a, .page-title {
+        color: #cfcfd0;
+    }
 
     img.custom-logo{
         display: block;
