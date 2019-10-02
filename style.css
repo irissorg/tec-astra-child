@@ -297,7 +297,7 @@ aside.tec-docs i{padding-right:1em;}
     /* img.custom-logo{ content:url("https://tec.scot/wp-content/uploads/2019/10/tec-logo-sq-darkmode.png"); } */
 
     /* headers */
-    .entry-content h1{color: #cfcfd0;}
+    h1, .entry-content h1{color: #cfcfd0;}
 
 
 
