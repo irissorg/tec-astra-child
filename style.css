@@ -309,6 +309,14 @@ aside.tec-docs i{padding-right:1em;}
         color: #cfcfd0;
     }
 
+    /* header menu links */
+
+    .main-header-menu a, .ast-header-custom-item a {
+        color: #cfcfd0;
+    }
+    .main-header-menu .sub-menu {
+        background:  #26272a;
+    }
 
 
     /* links */
