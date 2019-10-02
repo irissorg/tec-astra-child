@@ -293,5 +293,5 @@ aside.tec-docs i{padding-right:1em;}
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark){
-    body{background-color: black;color: white;}
+    body, .main-header-bar{background-color: black;color: white;}
 }
