@@ -295,6 +295,12 @@ aside.tec-docs i{padding-right:1em;}
 @media (prefers-color-scheme: dark){
     body, .main-header-bar{background-color: #2e3032;color: #cfcfd0;}
     /* img.custom-logo{ content:url("https://tec.scot/wp-content/uploads/2019/10/tec-logo-sq-darkmode.png"); } */
+
+    /* headers */
+    .entry-content h1{color: #cfcfd0;}
+
+
+
     img.custom-logo{
         display: block;
         -moz-box-sizing: border-box;
