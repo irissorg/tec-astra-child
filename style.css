@@ -303,9 +303,8 @@ aside.tec-docs i{padding-right:1em;}
     .content-area p a, .content-area li a {
         border-bottom-color: #cfcfd0;
     }
-    a, .page-title {
-        color: #cfcfd0;
-    }
+    a, .page-title {color: #cfcfd0;}
+    a:hover, a:focus {color:white;}
 
     img.custom-logo{
         display: block;
