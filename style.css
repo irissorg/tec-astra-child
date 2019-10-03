@@ -310,15 +310,14 @@ aside.tec-docs i{padding-right:1em;}
     }
 
     /* header menu links */
-
-    .main-header-menu a, .ast-header-custom-item a {
+    .main-header-menu a, .ast-header-custom-item a, aside.tec-docs .mute{
         color: #cfcfd0;
     }
     .main-header-menu .sub-menu {
         background:  #26272a;
     }
     /* tec docs */
-    aside.tec-docs h3, aside.tec-docs .mute{
+    aside.tec-docs h3{
         background-color: #26272a;
         color: #cfcfd0;
     }
@@ -346,5 +345,10 @@ aside.tec-docs i{padding-right:1em;}
     .ast-below-header, .ast-below-header-menu .sub-menu {
         background-color: #26272a;
     }
+    .button .booknow{background-color: #61cfc2;color: #26272a;}
+    .tec-icons {color: #61cfc2;}
+
+
+
     /* .tec-sitelogo{ content:url("https://tec.scot/wp-content/uploads/2019/10/tec-logo-sq-darkmode.png"); } */
 }
