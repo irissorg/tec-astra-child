@@ -317,7 +317,14 @@ aside.tec-docs i{padding-right:1em;}
     .main-header-menu .sub-menu {
         background:  #26272a;
     }
+    /* tec docs */
+    aside.tec-docs h3{
+        background-color: #26272a;
+        color: #cfcfd0;
+    }
 
+    /* co blocks */
+    div.wp-block-coblocks-row__inner .has-background{background-color: #26272a; color: #cfcfd0;}
 
     /* links */
     .content-area p a, .content-area li a {
