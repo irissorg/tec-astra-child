@@ -345,7 +345,7 @@ aside.tec-docs i{padding-right:1em;}
     .ast-below-header, .ast-below-header-menu .sub-menu {
         background-color: #26272a;
     }
-    .booknow{background-color: #61cfc2;color: #26272a;}
+    .event-details-single-inner .booknow{background-color: #61cfc2;color: #26272a;}
     .tec-icons {color: #61cfc2;}
 
 
