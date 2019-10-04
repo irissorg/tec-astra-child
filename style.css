@@ -293,7 +293,7 @@ aside.tec-docs i{padding-right:1em;}
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark){
-    body, .main-header-bar{background-color: #2e3032;color: #cfcfd0;}
+    body, .main-header-bar, .ast-header-break-point .main-header-menu{background-color: #2e3032;color: #cfcfd0;}
     /* img.custom-logo{ content:url("https://tec.scot/wp-content/uploads/2019/10/tec-logo-sq-darkmode.png"); } */
 
     /* headers */
@@ -342,7 +342,7 @@ aside.tec-docs i{padding-right:1em;}
         padding-left: 100px; /* Equal to width of new image */
         background-size: contain;
     }
-    .ast-below-header, .ast-below-header-menu .sub-menu {
+    .ast-below-header, .ast-below-header-menu .sub-menu{
         background-color: #26272a;
     }
     .event-details-single-inner .booknow{background-color: #61cfc2;color: #26272a;}
