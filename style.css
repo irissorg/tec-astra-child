@@ -293,7 +293,7 @@ aside.tec-docs i{padding-right:1em;}
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark){
-    body, .main-header-bar, .ast-header-break-point .main-header-menu, ul.sub-menu{background-color: #2e3032;color: #cfcfd0;}
+    body, .main-header-bar, .ast-header-break-point .main-header-menu, .ast-submenu-expanded ul.sub-menu{background-color: #2e3032;color: #cfcfd0;}
     /* img.custom-logo{ content:url("https://tec.scot/wp-content/uploads/2019/10/tec-logo-sq-darkmode.png"); } */
 
     /* headers */
