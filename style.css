@@ -297,7 +297,8 @@ aside.tec-docs i{padding-right:1em;}
     /* img.custom-logo{ content:url("https://tec.scot/wp-content/uploads/2019/10/tec-logo-sq-darkmode.png"); } */
 
     /* headers */
-    .entry-title a, h1, .entry-content h1, h2, .entry-content h2, h3, .entry-content h3,h4, .entry-content h4,h5, .entry-content h5, .wp-block-latest-posts__post-date, .widget-title {color: #cfcfd0;}
+    .entry-title a, h1, .entry-content h1, h2, .entry-content h2, h3, .entry-content h3,h4, .entry-content h4,h5, .entry-content h5, .wp-block-latest-posts__post-date, .widget-title, .ab-block-post-grid header .ab-block-post-grid-title a {color: #cfcfd0;}
+
 
     /* header bar */
     .main-header-bar {border-bottom-color: #26272a;}
