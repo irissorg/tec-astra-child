@@ -311,7 +311,7 @@ aside.tec-docs i{padding-right:1em;}
     }
 
     /* header menu links */
-    .main-header-menu a, .ast-header-custom-item a, aside.tec-docs .mute{
+    .main-header-menu a span.menu-text, .ast-header-custom-item a, aside.tec-docs .mute{
         color: #cfcfd0;
     }
     .main-header-menu .sub-menu {
